@@ -16,7 +16,7 @@
             <div class="answer">
                 <input @input="setChanged(userData.data, 'workingHours')" v-model="userData.data.workingHours.value"
                     type="number"  placeholder="请输入数字"/>
-                <div class="other">下班时间-上班时间</div>
+                <div class="other">下班时间-上班时间(时)</div>
             </div>
         </div>
         <img style="height: 150px; right: -25px; bottom: -30px" src="../assets/work.png" alt="" class="deco" />
@@ -27,7 +27,7 @@
             <div class="answer">
                 <input @input="setChanged(userData.data, 'commutingHours')" v-model="userData.data.commutingHours.value"
                     type="number"  placeholder="请输入数字"/>
-                <div class="other">上下班来回时长</div>
+                <div class="other">上下班来回时长(时)</div>
             </div>
         </div>
         <img style="height: 135px; right: -10px; bottom: -20px" src="../assets/subway.png" alt="" class="deco" />
@@ -38,7 +38,7 @@
             <div class="answer">
                 <input @input="setChanged(userData.data, 'funHours')" v-model="userData.data.funHours.value"
                     type="number"  placeholder="请输入数字"/>
-                <div class="other">不干活+吃饭+午休</div>
+                <div class="other">不干活+吃饭+午休(时)</div>
             </div>
         </div>
         <img style="
