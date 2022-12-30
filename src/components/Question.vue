@@ -330,7 +330,7 @@ function setChanged(userData, tag) {
 }
 
 .other {
-    font-size: 3px;
+    font-size: 8px;
 }
 
 .answer input {
