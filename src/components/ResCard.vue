@@ -1,9 +1,9 @@
 <template>
-    <div class="resCard">
-        <div class="title">很{{ outPut }}</div>
+    <a href="https://space.bilibili.com/7277347" target="_blank" class="resCard">
+        <div class="title">{{ outPut }}</div>
         <div class="resData">你的工作性价比: {{ resData }}</div>
         <img src="../assets/line.png" alt="" class="line">
-    </div>
+    </a>
 </template>
 
 <script setup>
@@ -30,6 +30,8 @@ const props = defineProps({
     margin-top: 70px;
     padding: 30px;
     justify-content: space-around;
+    text-decoration: none;
+    color: #333;
 }
 .line {
     max-width: 100%;
