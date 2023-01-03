@@ -344,7 +344,7 @@ function setChanged(userData, tag) {
     text-align: center;
     font-family:'字体圈欣意吉祥宋';
     letter-spacing: 0.1rem;
-    
+    border-radius: 0;
 }
 
 .answer input:focus {

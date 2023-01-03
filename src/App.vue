@@ -1,129 +1,148 @@
 <script setup>
 import Question from "./components/Question.vue";
-import Info from "./components/Info.vue"
-import ResCard from "./components/ResCard.vue"
+import Info from "./components/Info.vue";
+import ResCard from "./components/ResCard.vue";
 import { reactive, toRefs, onMounted, ref, provide, watch } from "vue";
 const userData = reactive({
   data: {
     dailySalary: {
-      value: '',
+      value: "",
       changed: false,
     },
     workingHours: {
-      value: '',
+      value: "",
       changed: false,
     },
     commutingHours: {
-      value: '',
+      value: "",
       changed: false,
     },
     funHours: {
-      value: '',
+      value: "",
       changed: false,
     },
     education: {
-      value: '',
+      value: "",
       changed: false,
     },
     environment: {
-      value: '',
+      value: "",
       changed: false,
     },
     oppositeSex: {
-      value: '',
+      value: "",
       changed: false,
     },
     colleague: {
-      value: '',
+      value: "",
       changed: false,
     },
     isEarly: {
-      value: '',
+      value: "",
       changed: false,
     },
     city: {
-      value: '',
+      value: "",
       changed: false,
     },
     holiday: {
-      value: '',
+      value: "",
       changed: false,
     },
     overtime: {
-      value: '',
+      value: "",
       changed: false,
     },
   },
 });
-let outPut = ref('')
+let objClass = reactive({
+  bad: false,
+  normal: false,
+  great: false,
+});
+let outPut = ref("");
 let isFinished = ref(false);
 let res = ref(0);
 let showInfo = ref(false);
-let showRes = ref(false)
+let showRes = ref(false);
 function calData(userData) {
-  res.value = parseFloat(Math.sqrt(
-    (userData.dailySalary.value *
-      parseFloat(userData.environment.value) *
-      parseFloat(userData.oppositeSex.value) *
-      parseFloat(userData.colleague.value) *
-      parseFloat(userData.holiday.value) *
-      parseFloat(userData.isEarly.value) *
-      parseFloat(userData.overtime.value)
-    ) /
-    (25 *
-      (userData.workingHours.value +
-        0.5 * userData.commutingHours.value -
-        0.5 * userData.funHours.value) *
-      parseFloat(userData.education.value) *
-      parseFloat(userData.city.value))
-  ).toFixed(2));
+  res.value = 
+    Math.sqrt(
+      (userData.dailySalary.value *
+        parseFloat(userData.environment.value) *
+        parseFloat(userData.oppositeSex.value) *
+        parseFloat(userData.colleague.value) *
+        parseFloat(userData.holiday.value) *
+        parseFloat(userData.isEarly.value) *
+        parseFloat(userData.overtime.value)) /
+        (25 *
+          (userData.workingHours.value +
+            0.5 * userData.commutingHours.value -
+            0.5 * userData.funHours.value) *
+          parseFloat(userData.education.value) *
+          parseFloat(userData.city.value))
+    )
+  ;
 }
 function changeShowInfo() {
-  showInfo.value = !showInfo.value
+  showInfo.value = !showInfo.value;
 }
 watch(userData.data, () => {
   let count = true;
   for (var key in userData.data) {
     if (!userData.data[key].changed) {
       count = false;
-      console.log(key);
+      // console.log(key);
     }
   }
   if (count) {
     isFinished.value = true;
   }
 });
-watch([isFinished, userData.data], () => {
-  if (isFinished.value) {
-    calData(userData.data)
-    if (res.value < 0.8){
-      outPut.value = "惨爆"
-    } else if (res.value < 0.9) {
-      outPut.value = "惨"
-    } else if (res.value < 1.2) {
-      outPut.value = "平淡"
-    } else if (res.value < 1.5) {
-      outPut.value = "爽"
+function changeShowRes() {
+  calData(userData.data);
+  showRes.value = true;
+  if (res.value < 0.8) {
+      outPut.value = "惨爆";
+      objClass.bad = true;
+    } else if (0.8 <= res.value && res.value < 0.9) {
+      outPut.value = "惨";
+      objClass.bad = true;
+    } else if (0.9 <= res.value && res.value < 1.2) {
+      outPut.value = "平淡";
+      objClass.normal = true;
+    } else if (1.2 <= res.value && res.value <= 1.5) {
+      outPut.value = "爽";
+      objClass.great = true;
     } else {
-      outPut.value = "爽爆"
+      outPut.value = "爽爆";
+      objClass.great = true;
     }
-  }
-});
-function changeShowRes(){
-  showRes.value = true
 }
 </script>
 
 <template>
-  <div @click="changeShowInfo()" v-if="!showInfo && !isFinished" class="infoButton">?</div>
+  <div
+    @click="changeShowInfo()"
+    v-if="!showInfo && !isFinished"
+    class="infoButton"
+  >
+    ?
+  </div>
   <Info v-show="showInfo" class="info"></Info>
   <div @click="changeShowInfo()" v-show="showInfo" class="mask"></div>
-  <div @click="changeShowRes()" v-if="isFinished && !showRes" class="run">这班上得值不值？！</div>
+  <div @click="changeShowRes()" v-if="isFinished && !showRes" class="run">
+    这班上得值不值？！
+  </div>
   <div v-if="!showRes" class="container">
     <Question :userData="userData"></Question>
   </div>
-  <ResCard v-if="showRes" :outPut="outPut" :resData="res" />
-  
+  <ResCard
+    v-if="showRes"
+    :outPut="outPut"
+    :resData="res"
+    :objClass="objClass"
+  />
 </template>
 
 <style scoped>
