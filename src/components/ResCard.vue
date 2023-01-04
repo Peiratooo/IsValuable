@@ -66,8 +66,8 @@ box-shadow: 7px 7px 20px rgba(206,255,225,1);
 
 }
 .great {
-    background: rgb(255,212,206);
-background: linear-gradient(312deg, rgba(255,212,206,1) 0%, rgba(255,255,255,1) 71%);
-box-shadow: 7px 7px 20px rgba(255,212,206,0.5);
+    background: rgb(255, 226, 206);
+background: linear-gradient(312deg, rgb(255, 230, 189) 0%, rgba(255,255,255,1) 71%);
+box-shadow: 7px 7px 20px rgba(255, 226, 206,0.5);
 }
 </style>

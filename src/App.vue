@@ -151,6 +151,7 @@ function changeShowRes() {
   width: 80%;
   margin: 50px auto;
   max-width: 800px;
+  margin-bottom: 150px;
 }
 
 .run {
@@ -158,7 +159,7 @@ function changeShowRes() {
   z-index: 999;
   left: 0;
   right: 0;
-  bottom: 15%;
+  bottom: 5%;
   width: 68%;
   text-align: center;
   background-color: #363636;
