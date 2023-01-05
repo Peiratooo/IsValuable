@@ -1,5 +1,5 @@
 <template>
-    <div class="question">
+    <div class="question" data-aos="fade-down">
         <div class="content">
             <div class="text">平均日薪</div>
             <div class="answer">
@@ -10,35 +10,35 @@
         </div>
         <img src="../assets/cash.png" style="transform: rotate(30deg); right:-50px;" alt="" class="deco" />
     </div>
-    <div class="question">
+    <div class="question" data-aos="fade-up" data-aos-delay="300">
         <div class="content">
             <div class="text">工作时长</div>
             <div class="answer">
                 <input @input="setChanged(userData.data, 'workingHours')" v-model="userData.data.workingHours.value"
-                    type="number" placeholder="请输入数字" />
-                <div class="other">下班时间-上班时间(时)</div>
+                    type="number" placeholder="请输入(时)" />
+                <div class="other">下班时间-上班时间</div>
             </div>
         </div>
         <img style="height: 150px; right: -25px; bottom: -30px" src="../assets/work.png" alt="" class="deco" />
     </div>
-    <div class="question">
+    <div class="question" data-aos="fade-up" data-aos-delay="500">
         <div class="content">
             <div class="text">通勤时常</div>
             <div class="answer">
                 <input @input="setChanged(userData.data, 'commutingHours')" v-model="userData.data.commutingHours.value"
-                    type="number" placeholder="请输入数字" />
-                <div class="other">上下班来回时长(时)</div>
+                    type="number" placeholder="请输入(时)" />
+                <div class="other">上下班来回时长</div>
             </div>
         </div>
         <img style="height: 135px; right: -10px; bottom: -20px" src="../assets/subway.png" alt="" class="deco" />
     </div>
-    <div class="question">
+    <div class="question" data-aos="fade-up" data-aos-delay="700">
         <div class="content">
             <div class="text">摸鱼时常</div>
             <div class="answer">
                 <input @input="setChanged(userData.data, 'funHours')" v-model="userData.data.funHours.value"
-                    type="number" placeholder="请输入数字" />
-                <div class="other">不干活+吃饭+午休(时)</div>
+                    type="number" placeholder="请输入(时)" />
+                <div class="other">不干活+吃饭+午休</div>
             </div>
         </div>
         <img style="
@@ -49,7 +49,7 @@
         transform: scale(-1, 1);
       " src="../assets/fish.png" alt="" class="deco" />
     </div>
-    <div class="sradio">
+    <div class="sradio" data-aos="fade-up" data-aos-delay="900">
         <div class="radioContent">
             <div class="text">学历系数</div>
             <div class="radios" @input="setChanged(userData.data, 'education')">
@@ -79,7 +79,7 @@
         <img style="height: 120px; right:-20px; bottom: -30px" src="../assets/edu.png" alt="" class="deco" />
 
     </div>
-    <div class="sradio">
+    <div class="sradio" data-aos="fade-up" data-aos-delay="1100">
         <div class="radioContent">
             <div class="text">城市系数</div>
             <div class="radios" @input="setChanged(userData.data, 'city')">
@@ -101,7 +101,7 @@
             class="deco" />
 
     </div>
-    <div class="sradio">
+    <div class="sradio"  data-aos="fade-up" data-aos-delay="150">
         <div class="radioContent">
             <div class="text">工作环境系数</div>
             <div class="radios" @input="setChanged(userData.data, 'environment')">
@@ -123,7 +123,7 @@
             class="deco" />
 
     </div>
-    <div class="sradio">
+    <div class="sradio"  data-aos="fade-up" data-aos-delay="150">
         <div class="radioContent">
             <div class="text">异性环境系数</div>
             <div class="radios" @input="setChanged(userData.data, 'oppositeSex')">
@@ -143,7 +143,7 @@
         <img style="height: 120px; right:-20px; bottom: -20px" src="../assets/sex.png" alt="" class="deco" />
 
     </div>
-    <div class="sradio">
+    <div class="sradio"  data-aos="fade-up" data-aos-delay="150">
         <div class="radioContent">
             <div class="text">同事环境系数</div>
             <div class="radios" @input="setChanged(userData.data, 'colleague')">
@@ -162,7 +162,7 @@
             alt="" class="deco" />
 
     </div>
-    <div class="sradio">
+    <div class="sradio" data-aos="fade-up" data-aos-delay="150">
         <div class="radioContent">
             <div class="text">休息日系数</div>
             <div class="radios" @input="setChanged(userData.data, 'holiday')">
@@ -189,7 +189,7 @@
         <img style="height: 120px; right:-30px; bottom: -20px" src="../assets/relax.png" alt="" class="deco" />
 
     </div>
-    <div class="sradio">
+    <div class="sradio" data-aos="fade-up" data-aos-delay="150">
         <div class="radioContent">
             <div class="text">上班时间系数</div>
             <div class="radios" @input="setChanged(userData.data, 'isEarly')">
@@ -207,7 +207,7 @@
         <img style="height: 120px; right:-20px; bottom: -20px" src="../assets/time.png" alt="" class="deco" />
 
     </div>
-    <div class="sradio">
+    <div class="sradio" data-aos="fade-up" data-aos-delay="150">
         <div class="radioContent">
             <div class="text">下班后工作系数</div>
             <div class="radios" @input="setChanged(userData.data, 'overtime')">
@@ -229,7 +229,6 @@
 
 <script setup>
 import { reactive, toRefs, watch, onMounted } from "vue";
-
 
 
 const props = defineProps({
@@ -339,7 +338,7 @@ function setChanged(userData, tag) {
 }
 
 .other {
-    font-size: 9px;
+    font-size: 10px;
 }
 
 .answer input {
