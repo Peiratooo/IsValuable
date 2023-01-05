@@ -134,7 +134,7 @@ function changeShowRes() {
     leave-active-class="animate__animated animate__fadeOutRight">
     <div data-aos="fade-left" data-aos-delay="1000" @click="changeShowInfo()" v-show="!showInfo && !isFinished"
       class="infoButton">
-      ?
+      <span>?</span>
     </div>
   </Transition>
 
@@ -199,14 +199,20 @@ function changeShowRes() {
   background: #ffffff;
   box-shadow: 0px 5px 10px #bcbcbc;
   border-radius: 100%;
-  text-align: center;
   position: fixed;
+  text-align: center;
   bottom: 10%;
   right: 15%;
   z-index: 99;
-  font-size: 25px;
   cursor: pointer;
   color: #555;
+}
+
+.infoButton span {
+  font-size: 22px;
+  position: relative;
+  top: 3.9px;
+  left: -0.3px;
 }
 
 .info {

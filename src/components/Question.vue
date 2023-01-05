@@ -79,7 +79,7 @@
         <img style="height: 120px; right:-20px; bottom: -30px" src="../assets/edu.png" alt="" class="deco" />
 
     </div>
-    <div class="sradio" data-aos="fade-up" data-aos-delay="1100">
+    <div class="sradio" data-aos="fade-up" data-aos-delay="1100" data-aos-offset="-500">
         <div class="radioContent">
             <div class="text">城市系数</div>
             <div class="radios" @input="setChanged(userData.data, 'city')">
