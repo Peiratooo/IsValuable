@@ -1,5 +1,6 @@
 <template>
-    <div class="question" data-aos="fade-down">
+    <div class="blank"></div>
+    <div class="question" data-aos="fade-down" data-aos-delay="250">
         <div class="content">
             <div class="text">平均日薪</div>
             <div class="answer">
@@ -10,7 +11,7 @@
         </div>
         <img src="../assets/cash.png" style="transform: rotate(30deg); right:-50px;" alt="" class="deco" />
     </div>
-    <div class="question" data-aos="fade-up" data-aos-delay="300">
+    <div class="question" data-aos="fade-up" data-aos-delay="500">
         <div class="content">
             <div class="text">工作时长</div>
             <div class="answer">
@@ -21,7 +22,7 @@
         </div>
         <img style="height: 150px; right: -25px; bottom: -30px" src="../assets/work.png" alt="" class="deco" />
     </div>
-    <div class="question" data-aos="fade-up" data-aos-delay="500">
+    <div class="question" data-aos="fade-up" data-aos-delay="750">
         <div class="content">
             <div class="text">通勤时常</div>
             <div class="answer">
@@ -32,7 +33,7 @@
         </div>
         <img style="height: 135px; right: -10px; bottom: -20px" src="../assets/subway.png" alt="" class="deco" />
     </div>
-    <div class="question" data-aos="fade-up" data-aos-delay="700">
+    <div class="question" data-aos="fade-up" data-aos-delay="1000">
         <div class="content">
             <div class="text">摸鱼时常</div>
             <div class="answer">
@@ -49,7 +50,7 @@
         transform: scale(-1, 1);
       " src="../assets/fish.png" alt="" class="deco" />
     </div>
-    <div class="sradio" data-aos="fade-up" data-aos-delay="900">
+    <div class="sradio" data-aos="fade-up" data-aos-delay="1200">
         <div class="radioContent">
             <div class="text">学历系数</div>
             <div class="radios" @input="setChanged(userData.data, 'education')">
@@ -79,7 +80,7 @@
         <img style="height: 120px; right:-20px; bottom: -30px" src="../assets/edu.png" alt="" class="deco" />
 
     </div>
-    <div class="sradio" data-aos="fade-up" data-aos-delay="1100" data-aos-offset="-500">
+    <div class="sradio" data-aos="fade-up" data-aos-delay="1300" data-aos-offset="-500">
         <div class="radioContent">
             <div class="text">城市系数</div>
             <div class="radios" @input="setChanged(userData.data, 'city')">
@@ -101,7 +102,7 @@
             class="deco" />
 
     </div>
-    <div class="sradio"  data-aos="fade-up" data-aos-delay="150">
+    <div class="sradio"  data-aos="fade-up" data-aos-delay="50">
         <div class="radioContent">
             <div class="text">工作环境系数</div>
             <div class="radios" @input="setChanged(userData.data, 'environment')">
@@ -123,7 +124,7 @@
             class="deco" />
 
     </div>
-    <div class="sradio"  data-aos="fade-up" data-aos-delay="150">
+    <div class="sradio"  data-aos="fade-up" data-aos-delay="50">
         <div class="radioContent">
             <div class="text">异性环境系数</div>
             <div class="radios" @input="setChanged(userData.data, 'oppositeSex')">
@@ -143,7 +144,7 @@
         <img style="height: 120px; right:-20px; bottom: -20px" src="../assets/sex.png" alt="" class="deco" />
 
     </div>
-    <div class="sradio"  data-aos="fade-up" data-aos-delay="150">
+    <div class="sradio"  data-aos="fade-up" data-aos-delay="50">
         <div class="radioContent">
             <div class="text">同事环境系数</div>
             <div class="radios" @input="setChanged(userData.data, 'colleague')">
@@ -162,7 +163,7 @@
             alt="" class="deco" />
 
     </div>
-    <div class="sradio" data-aos="fade-up" data-aos-delay="150">
+    <div class="sradio" data-aos="fade-up" data-aos-delay="50">
         <div class="radioContent">
             <div class="text">休息日系数</div>
             <div class="radios" @input="setChanged(userData.data, 'holiday')">
@@ -189,7 +190,7 @@
         <img style="height: 120px; right:-30px; bottom: -20px" src="../assets/relax.png" alt="" class="deco" />
 
     </div>
-    <div class="sradio" data-aos="fade-up" data-aos-delay="150">
+    <div class="sradio" data-aos="fade-up" data-aos-delay="50">
         <div class="radioContent">
             <div class="text">上班时间系数</div>
             <div class="radios" @input="setChanged(userData.data, 'isEarly')">
@@ -207,7 +208,7 @@
         <img style="height: 120px; right:-20px; bottom: -20px" src="../assets/time.png" alt="" class="deco" />
 
     </div>
-    <div class="sradio" data-aos="fade-up" data-aos-delay="150">
+    <div class="sradio" data-aos="fade-up" data-aos-delay="50">
         <div class="radioContent">
             <div class="text">下班后工作系数</div>
             <div class="radios" @input="setChanged(userData.data, 'overtime')">
@@ -258,7 +259,11 @@ function setChanged(userData, tag) {
     position: relative;
     overflow: hidden;
 }
-
+.blank {
+    content: none;
+    width: 100%;
+    height: 60px;
+}
 .content,
 .item {
     display: flex;
@@ -292,8 +297,10 @@ function setChanged(userData, tag) {
 }
 
 .item input {
-    min-height: 15px;
-    min-width: 15px;
+    min-height: 12px;
+    max-width: 12px;
+    min-height: 12px;
+    max-width: 12px;
     margin-top: 2px;
 }
 
@@ -322,7 +329,6 @@ function setChanged(userData, tag) {
     bottom: -50px;
     right: -20px;
     opacity: 0.035;
-    /* transform: rotate(30deg); */
     filter: saturate(0%);
 }
 
@@ -334,7 +340,6 @@ function setChanged(userData, tag) {
     z-index: 5;
     min-width: 5rem;
     top: 12px;
-    /* max-width:100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -351,11 +356,12 @@ function setChanged(userData, tag) {
     border: none;
     border-bottom: #ccc 1px solid;
     width: 100%;
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
     font-family: '字体圈欣意吉祥宋';
     letter-spacing: 0.1rem;
     border-radius: 0;
+    padding-bottom: 2px;
 }
 
 .answer input:focus {

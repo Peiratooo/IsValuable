@@ -2,16 +2,86 @@
 import Question from "./components/Question.vue";
 import Info from "./components/Info.vue";
 import ResCard from "./components/ResCard.vue";
-import { reactive, toRefs, onMounted, ref, provide, watch, Transition } from "vue";
+import Loading from "./components/Loading.vue"
+import { reactive, toRefs, onMounted, ref, onBeforeMount, watch, Transition } from "vue";
 import AOS from 'aos'
 import './assets/aos.css'
+let loadCount = ref(0);
+let imgs = [
+    "../src/assets/cash.png",
+    "../src/assets/city.png",
+    "../src/assets/colleage.png",
+    "../src/assets/edu.png",
+    "../src/assets/env.png",
+    "../src/assets/fish.png",
+    "../src/assets/formula.png",
+    "../src/assets/line.png",
+    "../src/assets/overtime.png",
+    "../src/assets/relax.png",
+    "../src/assets/sex.png",
+    "../src/assets/subway.png",
+    "../src/assets/time.png",
+    "../src/assets/work.png",
+  ]
+function loadSrc(imgs) {
+  // let imgObj = {
+  //   "cash":"",
+  //   "city":"",
+  //   "colleage":"",
+  //   "edu":"",
+  //   "env":"",
+  //   "fish":"",
+  //   "formula":"",
+  //   "line":"",
+  //   "overtime":"",
+  //   "relax":"",
+  //   "sex":"",
+  //   "subway":"",
+  //   "time":"",
+  //   "title":"",
+  //   "city":"",
+  // }
+  for (let img of imgs) {
+    let image = new Image()
+    image.src = img;
+    image.onload = () => {
+      loadCount.value++
+      // console.log(image);
+      // console.log(loadCount.value, imgs.length);
+      if (loadCount.value - imgs.length >= 0) {
+        setTimeout(() => {
+          isLoaded.value = true
+        }, 3000);
+      }
+    };
+    
+    
 
+  }
+}
+
+onBeforeMount(() => {
+  loadSrc(imgs)
+})
 onMounted(() => {
   AOS.init({
     once: true,
     duration: 1000,
     offset: 0,
   });
+  // setTimeout(() => {
+  //   isLoaded.value = true
+  // }, 3000);
+  console.log(`
+██████╗  ███████╗ ██╗ ██████╗   █████╗  ████████╗  ██████╗ 
+██╔══██╗ ██╔════╝ ██║ ██╔══██╗ ██╔══██╗ ╚══██╔══╝ ██╔═══██╗
+██████╔╝ █████╗   ██║ ██████╔╝ ███████║    ██║    ██║   ██║
+██╔═══╝  ██╔══╝   ██║ ██╔══██╗ ██╔══██║    ██║    ██║   ██║
+██║      ███████╗ ██║ ██║  ██║ ██║  ██║    ██║    ╚██████╔╝
+╚═╝      ╚══════╝ ╚═╝ ╚═╝  ╚═╝ ╚═╝  ╚═╝    ╚═╝     ╚═════╝ 
+
+https://space.bilibili.com/7277347
+`);
 })
 const userData = reactive({
   data: {
@@ -127,44 +197,50 @@ function changeShowRes() {
     objClass.great = true;
   }
 }
+let isLoaded = ref(false)
 </script>
 
 <template>
-  <Transition name="infoAnimate" enter-active-class="animate__animated animate__fadeInRight"
-    leave-active-class="animate__animated animate__fadeOutRight">
-    <div data-aos="fade-left" data-aos-delay="1000" @click="changeShowInfo()" v-show="!showInfo && !isFinished"
-      class="infoButton">
-      <span>?</span>
-    </div>
+  <Transition leave-active-class="animate__animated animate__fadeOut animate__faster">
+    <Loading v-show="!isLoaded"></Loading>
   </Transition>
+  <div class="loaded" v-if="isLoaded">
+    <Transition name="infoAnimate" enter-active-class="animate__animated animate__fadeInRight"
+      leave-active-class="animate__animated animate__fadeOutRight">
+      <div data-aos="fade-left" data-aos-delay="1000" @click="changeShowInfo()" v-show="!showInfo && !isFinished"
+        class="infoButton">
+        <span>?</span>
+      </div>
+    </Transition>
 
-  <Transition name="info" enter-active-class="animate__animated animate__slideInDown"
-    leave-active-class="animate__animated animate__fadeOutUp">
-    <Info v-show="showInfo" class="info"></Info>
-  </Transition>
-  <Transition name="mask" enter-active-class="animate__animated animate__fadeIn"
-    leave-active-class="animate__animated animate__fadeOut">
-    <div @click="changeShowInfo()" v-show="showInfo" class="mask"></div>
-  </Transition>
-  <Transition name="run"  enter-active-class="animate__animated animate__fadeInUp"
-    leave-active-class="animate__animated animate__fadeOutDown">
-    <div @click="changeShowRes()" v-if="isFinished && !showRes" class="run">
-      这班上得值不值？！
+    <Transition name="info" enter-active-class="animate__animated animate__slideInDown"
+      leave-active-class="animate__animated animate__fadeOutUp">
+      <Info v-show="showInfo" class="info"></Info>
+    </Transition>
+    <Transition name="mask" enter-active-class="animate__animated animate__fadeIn"
+      leave-active-class="animate__animated animate__fadeOut">
+      <div @click="changeShowInfo()" v-show="showInfo" class="mask"></div>
+    </Transition>
+    <Transition name="run" enter-active-class="animate__animated animate__fadeInUp"
+      leave-active-class="animate__animated animate__fadeOutDown">
+      <div @click="changeShowRes()" v-if="isFinished && !showRes" class="run">
+        这班上得值不值 ? !
+      </div>
+    </Transition>
+    <div v-if="!showRes" class="container">
+      <Question :userData="userData"></Question>
     </div>
-  </Transition>
-  <div v-if="!showRes" class="container">
-    <Question :userData="userData"></Question>
+    <Transition name="res" enter-active-class="animate__animated animate__flipInY">
+      <ResCard v-if="showRes" :outPut="outPut" :resData="res" :objClass="objClass" />
+    </Transition>
   </div>
-  <Transition name="res" enter-active-class="animate__animated animate__flipInY">
-    <ResCard v-if="showRes" :outPut="outPut" :resData="res" :objClass="objClass" />
-  </Transition>
 </template>
 
 <style scoped>
 .container {
   display: block;
   width: 80%;
-  margin: 50px auto;
+  margin: 0 auto;
   max-width: 800px;
   margin-bottom: 150px;
 }
@@ -211,7 +287,7 @@ function changeShowRes() {
 .infoButton span {
   font-size: 22px;
   position: relative;
-  top: 3.9px;
+  top: 3px;
 }
 
 .info {

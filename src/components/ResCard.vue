@@ -25,12 +25,11 @@ const props = defineProps({
     display: flex;
     flex-direction: column;
     width: 60%;
-    margin: 0 auto;
+    margin: 70px auto;
     align-items: center;
     border-radius: 20px;
     box-shadow: 7px 7px 20px #e8e8e8, -7px -7px 20px #e0e0e0;
     max-width: 500px;
-    margin-top: 70px;
     padding: 30px;
     justify-content: space-around;
     text-decoration: none;
