@@ -32,8 +32,7 @@
 
 .title {
     margin-top: 80px;
-    height: 60%;
-    opacity: 0.5;
+    height: 50%;
 }
 
 .unv {
@@ -43,7 +42,7 @@
 }
 
 .loadingThree {
-    width: 100px;
+    width: 80px;
     height: 12px;
     margin-top: 60px;
     display: flex;

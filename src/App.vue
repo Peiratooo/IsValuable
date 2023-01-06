@@ -202,7 +202,7 @@ let isLoaded = ref(false)
 
 <template>
   <Transition leave-active-class="animate__animated animate__fadeOut animate__faster">
-    <Loading v-show="!isLoaded"></Loading>
+    <Loading v-if="!isLoaded"></Loading>
   </Transition>
   <div class="loaded" v-if="isLoaded">
     <Transition name="infoAnimate" enter-active-class="animate__animated animate__fadeInRight"
