@@ -8,20 +8,20 @@ import AOS from 'aos'
 import './assets/aos.css'
 let loadCount = ref(0);
 let imgs = [
-    "../src/assets/cash.png",
-    "../src/assets/city.png",
-    "../src/assets/colleage.png",
-    "../src/assets/edu.png",
-    "../src/assets/env.png",
-    "../src/assets/fish.png",
-    "../src/assets/formula.png",
-    "../src/assets/line.png",
-    "../src/assets/overtime.png",
-    "../src/assets/relax.png",
-    "../src/assets/sex.png",
-    "../src/assets/subway.png",
-    "../src/assets/time.png",
-    "../src/assets/work.png",
+    "./assets/cash.png",
+    "./assets/city.png",
+    "./assets/colleage.png",
+    "./assets/edu.png",
+    "./assets/env.png",
+    "./assets/fish.png",
+    "./assets/formula.png",
+    "./assets/line.png",
+    "./assets/overtime.png",
+    "./assets/relax.png",
+    "./assets/sex.png",
+    "./assets/subway.png",
+    "./assets/time.png",
+    "./assets/work.png",
   ]
 function loadSrc(imgs) {
   // let imgObj = {
