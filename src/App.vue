@@ -48,7 +48,7 @@ function loadSrc(imgs) {
       loadCount.value++
       // console.log(image);
       // console.log(loadCount.value, imgs.length);
-      if (loadCount.value - imgs.length >= 0) {
+      if (loadCount.value - imgs.length >= -1) {
         setTimeout(() => {
           isLoaded.value = true
         }, 2000);

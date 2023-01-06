@@ -43,14 +43,14 @@
 
 .loadingThree {
     width: 80px;
-    height: 12px;
+    height: 10px;
     margin-top: 60px;
     display: flex;
     justify-content: space-between;
 }
 
 .loadingThree span {
-    width: 12px;
+    width: 10px;
     height: 100%;
     border-radius: 100%;
     background: rgb(50, 50, 50);
