@@ -2,7 +2,7 @@
     <a href="https://space.bilibili.com/7277347" target="_blank" class="resCard" :class="objClass">
         <div class="title">{{ outPut }}</div>
         <div class="resData">你的工作性价比: {{ resData.toFixed(2) }}</div>
-        <img src="../assets/line.png" alt="" class="line">
+        <img src="https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/line.png" alt="" class="line">
     </a>
 </template>
 

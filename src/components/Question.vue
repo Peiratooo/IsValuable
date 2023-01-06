@@ -9,7 +9,7 @@
                 <div class="other">单位:元(你又不是某爽)</div>
             </div>
         </div>
-        <img src="../assets/cash.png" style="transform: rotate(30deg); right:-50px;" alt="" class="deco" />
+        <img src="https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/cash.png" style="transform: rotate(30deg); right:-50px;" alt="" class="deco" />
     </div>
     <div class="question" data-aos="fade-up" data-aos-delay="500">
         <div class="content">
@@ -20,7 +20,7 @@
                 <div class="other">下班时间-上班时间</div>
             </div>
         </div>
-        <img style="height: 150px; right: -25px; bottom: -30px" src="../assets/work.png" alt="" class="deco" />
+        <img style="height: 150px; right: -25px; bottom: -30px" src="https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/work.png" alt="" class="deco" />
     </div>
     <div class="question" data-aos="fade-up" data-aos-delay="750">
         <div class="content">
@@ -31,7 +31,7 @@
                 <div class="other">上下班来回时长</div>
             </div>
         </div>
-        <img style="height: 135px; right: -10px; bottom: -20px" src="../assets/subway.png" alt="" class="deco" />
+        <img style="height: 135px; right: -10px; bottom: -20px" src="https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/subway.png" alt="" class="deco" />
     </div>
     <div class="question" data-aos="fade-up" data-aos-delay="1000">
         <div class="content">
@@ -48,7 +48,7 @@
         bottom: -25px;
         transform: rotate(-120deg);
         transform: scale(-1, 1);
-      " src="../assets/fish.png" alt="" class="deco" />
+      " src="https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/fish.png" alt="" class="deco" />
     </div>
     <div class="sradio" data-aos="fade-up" data-aos-delay="1200">
         <div class="radioContent">
@@ -77,7 +77,7 @@
                 </div>
             </div>
         </div>
-        <img style="height: 120px; right:-20px; bottom: -30px" src="../assets/edu.png" alt="" class="deco" />
+        <img style="height: 120px; right:-20px; bottom: -30px" src="https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/edu.png" alt="" class="deco" />
 
     </div>
     <div class="sradio" data-aos="fade-up" data-aos-delay="1300" data-aos-offset="-500">
@@ -98,7 +98,7 @@
                 </div>
             </div>
         </div>
-        <img style="height: 120px; right:0px; bottom: -20px; transform: rotate(0deg);" src="../assets/city.png" alt=""
+        <img style="height: 120px; right:0px; bottom: -20px; transform: rotate(0deg);" src="https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/city.png" alt=""
             class="deco" />
 
     </div>
@@ -120,7 +120,7 @@
                 </div>
             </div>
         </div>
-        <img style="height: 120px; right:0px; bottom: -20px; transform: rotate(0deg);" src="../assets/env.png" alt=""
+        <img style="height: 120px; right:0px; bottom: -20px; transform: rotate(0deg);" src="https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/env.png" alt=""
             class="deco" />
 
     </div>
@@ -141,7 +141,7 @@
                 </div>
             </div>
         </div>
-        <img style="height: 120px; right:-20px; bottom: -20px" src="../assets/sex.png" alt="" class="deco" />
+        <img style="height: 120px; right:-20px; bottom: -20px" src="https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/sex.png" alt="" class="deco" />
 
     </div>
     <div class="sradio"  data-aos="fade-up" data-aos-delay="50">
@@ -159,7 +159,7 @@
                 </div>
             </div>
         </div>
-        <img style="height: 110px; right:0px; bottom: -20px;transform: rotate(0deg);" src="../assets/colleage.png"
+        <img style="height: 110px; right:0px; bottom: -20px;transform: rotate(0deg);" src="https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/colleage.png"
             alt="" class="deco" />
 
     </div>
@@ -187,7 +187,7 @@
                 </div>
             </div>
         </div>
-        <img style="height: 120px; right:-30px; bottom: -20px" src="../assets/relax.png" alt="" class="deco" />
+        <img style="height: 120px; right:-30px; bottom: -20px" src="https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/relax.png" alt="" class="deco" />
 
     </div>
     <div class="sradio" data-aos="fade-up" data-aos-delay="50">
@@ -205,7 +205,7 @@
                 </div>
             </div>
         </div>
-        <img style="height: 120px; right:-20px; bottom: -20px" src="../assets/time.png" alt="" class="deco" />
+        <img style="height: 120px; right:-20px; bottom: -20px" src="https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/time.png" alt="" class="deco" />
 
     </div>
     <div class="sradio" data-aos="fade-up" data-aos-delay="50">
@@ -223,7 +223,7 @@
                 </div>
             </div>
         </div>
-        <img style="height: 120px; right:-20px; bottom: -20px" src="../assets/overtime.png" alt="" class="deco" />
+        <img style="height: 120px; right:-20px; bottom: -20px" src="https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/overtime.png" alt="" class="deco" />
 
     </div>
 </template>

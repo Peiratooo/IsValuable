@@ -1,7 +1,7 @@
 <template>
     <div class="infoContainer">
         <div class="title">关 于</div>
-        <img class="formula" src="../assets/formula.png" alt="">
+        <img class="formula" src="https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/formula.png" alt="">
         <div class="desc">算法来源: <a class="source" target="_blank"
                 href="https://www.zhihu.com/people/la-la-pai-pi-qiu/pins">知乎@天线宝宝烤面包</a></div>
         <div class="article">

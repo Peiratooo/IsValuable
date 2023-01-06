@@ -8,20 +8,20 @@ import AOS from 'aos'
 import './assets/aos.css'
 let loadCount = ref(0);
 let imgs = [
-    "./assets/cash.png",
-    "./assets/city.png",
-    "./assets/colleage.png",
-    "./assets/edu.png",
-    "./assets/env.png",
-    "./assets/fish.png",
-    "./assets/formula.png",
-    "./assets/line.png",
-    "./assets/overtime.png",
-    "./assets/relax.png",
-    "./assets/sex.png",
-    "./assets/subway.png",
-    "./assets/time.png",
-    "./assets/work.png",
+    "https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/cash.png",
+    "https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/city.png",
+    "https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/colleage.png",
+    "https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/edu.png",
+    "https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/env.png",
+    "https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/fish.png",
+    "https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/formula.png",
+    "https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/line.png",
+    "https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/overtime.png",
+    "https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/relax.png",
+    "https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/sex.png",
+    "https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/subway.png",
+    "https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/time.png",
+    "https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/work.png",
   ]
 function loadSrc(imgs) {
   // let imgObj = {
