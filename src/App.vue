@@ -24,30 +24,11 @@ let imgs = [
     "https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/work.png",
   ]
 function loadSrc(imgs) {
-  // let imgObj = {
-  //   "cash":"",
-  //   "city":"",
-  //   "colleage":"",
-  //   "edu":"",
-  //   "env":"",
-  //   "fish":"",
-  //   "formula":"",
-  //   "line":"",
-  //   "overtime":"",
-  //   "relax":"",
-  //   "sex":"",
-  //   "subway":"",
-  //   "time":"",
-  //   "title":"",
-  //   "city":"",
-  // }
   for (let img of imgs) {
     let image = new Image()
     image.src = img;
     image.onload = () => {
       loadCount.value++
-      // console.log(image);
-      // console.log(loadCount.value, imgs.length);
       if (loadCount.value - imgs.length >= -1) {
         setTimeout(() => {
           isLoaded.value = true
@@ -69,9 +50,6 @@ onMounted(() => {
     duration: 1000,
     offset: 0,
   });
-  // setTimeout(() => {
-  //   isLoaded.value = true
-  // }, 3000);
   console.log(`
 ██████╗  ███████╗ ██╗ ██████╗   █████╗  ████████╗  ██████╗ 
 ██╔══██╗ ██╔════╝ ██║ ██╔══██╗ ██╔══██╗ ╚══██╔══╝ ██╔═══██╗
@@ -170,7 +148,6 @@ watch(userData.data, () => {
   for (var key in userData.data) {
     if (!userData.data[key].changed) {
       count = false;
-      // console.log(key);
     }
   }
   if (count) {

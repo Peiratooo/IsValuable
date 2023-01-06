@@ -47,7 +47,6 @@ const props = defineProps({
     margin-bottom: 15px;
     text-align: center;
     font-size: 25vh;
-    border-bottom: #ffffff23 1px solid;
 }
 .resData {
     margin-top: 15px;

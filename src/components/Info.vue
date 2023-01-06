@@ -3,10 +3,10 @@
         <div class="title">关 于</div>
         <img class="formula" src="https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/formula.png" alt="">
         <div class="desc">算法来源: <a class="source" target="_blank"
-                href="https://www.zhihu.com/people/la-la-pai-pi-qiu/pins">知乎@天线宝宝烤面包</a></div>
+            href="https://www.zhihu.com/people/la-la-pai-pi-qiu/pins">知乎@天线宝宝烤面包</a></div>
         <div class="article">
-           人活着不是为了吃苦的，是为了寻找自己。<br>
-           如果你干某一件事，除了痛苦还是痛苦，那就要反思这事值不值得去做了。
+            人活着不是为了吃苦的，是为了寻找自己。<br>
+            如果你干某一件事，除了痛苦还是痛苦，那就要反思这事值不值得去做了。
         </div>
         <a class="author" href="https://space.bilibili.com/7277347" target="_blank">@Peirato</a>
     </div>
@@ -27,7 +27,6 @@
     align-items: center;
     background: #fff;
     border-radius: 20px;
-    /* box-shadow: 7px 7px 20px #e8e8e8, -7px -7px 20px #ffffff; */
     padding: 25px;
     margin-top: 50px;
     max-width: 600px;
