@@ -51,7 +51,7 @@ function loadSrc(imgs) {
       if (loadCount.value - imgs.length >= 0) {
         setTimeout(() => {
           isLoaded.value = true
-        }, 3000);
+        }, 2000);
       }
     };
     
