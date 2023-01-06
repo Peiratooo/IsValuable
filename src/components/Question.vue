@@ -286,11 +286,14 @@ function setChanged(userData, tag) {
 }
 
 .item label {
-    padding-left: 10px;
+    margin-left: 10px;
     letter-spacing: 0.1rem;
+    width: 85%;
 }
 
 .item input {
+    min-height: 15px;
+    min-width: 15px;
     margin-top: 2px;
 }
 

@@ -212,7 +212,6 @@ function changeShowRes() {
   font-size: 22px;
   position: relative;
   top: 3.9px;
-  left: -0.3px;
 }
 
 .info {
