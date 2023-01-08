@@ -102,7 +102,7 @@
             class="deco" />
 
     </div>
-    <div class="sradio"  data-aos="fade-up" data-aos-delay="50">
+    <div class="sradio"  data-aos="fade-up" data-aos-delay="150">
         <div class="radioContent">
             <div class="text">工作环境系数</div>
             <div class="radios" @input="setChanged(userData.data, 'environment')">
@@ -124,7 +124,7 @@
             class="deco" />
 
     </div>
-    <div class="sradio"  data-aos="fade-up" data-aos-delay="50">
+    <div class="sradio"  data-aos="fade-up" data-aos-delay="150">
         <div class="radioContent">
             <div class="text">异性环境系数</div>
             <div class="radios" @input="setChanged(userData.data, 'oppositeSex')">
@@ -144,7 +144,7 @@
         <img style="height: 120px; right:-20px; bottom: -20px" src="https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/sex.png" alt="" class="deco" />
 
     </div>
-    <div class="sradio"  data-aos="fade-up" data-aos-delay="50">
+    <div class="sradio"  data-aos="fade-up" data-aos-delay="150">
         <div class="radioContent">
             <div class="text">同事环境系数</div>
             <div class="radios" @input="setChanged(userData.data, 'colleague')">
@@ -163,7 +163,7 @@
             alt="" class="deco" />
 
     </div>
-    <div class="sradio" data-aos="fade-up" data-aos-delay="50">
+    <div class="sradio" data-aos="fade-up" data-aos-delay="150">
         <div class="radioContent">
             <div class="text">休息日系数</div>
             <div class="radios" @input="setChanged(userData.data, 'holiday')">
@@ -190,7 +190,7 @@
         <img style="height: 120px; right:-30px; bottom: -20px" src="https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/relax.png" alt="" class="deco" />
 
     </div>
-    <div class="sradio" data-aos="fade-up" data-aos-delay="50">
+    <div class="sradio" data-aos="fade-up" data-aos-delay="150">
         <div class="radioContent">
             <div class="text">上班时间系数</div>
             <div class="radios" @input="setChanged(userData.data, 'isEarly')">
@@ -208,7 +208,7 @@
         <img style="height: 120px; right:-20px; bottom: -20px" src="https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/time.png" alt="" class="deco" />
 
     </div>
-    <div class="sradio" data-aos="fade-up" data-aos-delay="50">
+    <div class="sradio" data-aos="fade-up" data-aos-delay="150">
         <div class="radioContent">
             <div class="text">下班后工作系数</div>
             <div class="radios" @input="setChanged(userData.data, 'overtime')">
