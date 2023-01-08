@@ -20,13 +20,13 @@
 .infoContainer {
     margin: 0 auto;
     width: 68%;
-    height: 50vh;
+    height: 68vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     background: #fff;
-    border-radius: 20px;
+    border-radius: 0 0 20px 20px;
     padding: 25px;
     margin-top: 50px;
     max-width: 600px;
@@ -37,7 +37,7 @@
 .title {
     font-size: 22px;
     color: rgba(0,0,0,0.8);
-    margin-bottom: 35px;
+    margin: 50px 0;
 }
 .desc {
     margin: 15px auto;
