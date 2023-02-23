@@ -6,6 +6,8 @@ import Loading from "./components/Loading.vue"
 import { reactive, toRefs, onMounted, ref, onBeforeMount, watch, Transition } from "vue";
 import AOS from 'aos'
 import './assets/aos.css'
+
+
 let loadCount = ref(0);
 let imgs = [
     "https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/cash.png",
@@ -35,15 +37,13 @@ function loadSrc(imgs) {
         }, 2000);
       }
     };
-    
-    
-
   }
 }
 
 onBeforeMount(() => {
   loadSrc(imgs)
 })
+
 onMounted(() => {
   AOS.init({
     once: true,
@@ -61,6 +61,7 @@ onMounted(() => {
 https://space.bilibili.com/7277347
 `);
 })
+
 const userData = reactive({
   data: {
     dailySalary: {
@@ -113,6 +114,7 @@ const userData = reactive({
     },
   },
 });
+
 let objClass = reactive({
   bad: false,
   normal: false,
@@ -175,9 +177,12 @@ function changeShowRes() {
   }
 }
 let isLoaded = ref(false)
+
+
 </script>
 
 <template>
+  
   <Transition leave-active-class="animate__animated animate__fadeOut animate__faster">
     <Loading v-if="!isLoaded"></Loading>
   </Transition>
