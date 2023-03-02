@@ -125,6 +125,8 @@ let isFinished = ref(false);
 let res = ref(0);
 let showInfo = ref(false);
 let showRes = ref(false);
+let isLoaded = ref(false);
+
 function calData(userData) {
   res.value = Math.sqrt(
     (userData.dailySalary.value *
@@ -141,6 +143,7 @@ function calData(userData) {
       parseFloat(userData.education.value) *
       parseFloat(userData.city.value))
   );
+  // res.value = 1.55
 }
 function changeShowInfo() {
   showInfo.value = !showInfo.value;
@@ -176,7 +179,7 @@ function changeShowRes() {
     objClass.great = true;
   }
 }
-let isLoaded = ref(false)
+
 
 
 </script>

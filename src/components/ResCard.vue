@@ -1,7 +1,7 @@
 <template>
     <div class="resCon">
         <a href="https://space.bilibili.com/7277347" target="_blank" class="resCard" :class="objClass">
-            <div class="title" :style="{ fontSize: 46 / outPut.length + 'vh' }">{{ outPut }}</div>
+            <div class="title" :style="{ fontSize: textSize + 'vh' }">{{ outPut }}</div>
             <div class="resData">你的工作性价比: {{ resData.toFixed(2) }}</div>
             <img src="https://mcfun.oss-cn-shenzhen.aliyuncs.com/isValuable/line.png" class="line">
         </a>
@@ -9,6 +9,8 @@
 </template>
 
 <script setup>
+import { ref,onMounted } from 'vue';
+var textSize = ref(36)
 
 const props = defineProps({
     outPut: {
@@ -21,6 +23,11 @@ const props = defineProps({
         type: Object,
     }
 });
+onMounted(() => {
+    if (props.outPut.length === 2) {
+        textSize.value = 24
+    };
+})
 </script>
 
 <style scoped>
